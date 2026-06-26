@@ -1,0 +1,129 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY WITH ANIMATED BACKGROUND */
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Background Animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Soft Glow */
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+    top: -100px;
+    right: -100px;
+    filter: blur(100px);
+    z-index: -1;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* FORM CARD */
+.form-box {
+    max-width: 550px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 18px;
+    background: #ffffff;
+    color: rgb(12,52,61);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.2),
+        0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* HEADING */
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(12,52,61);
+    margin-bottom: 20px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    margin-bottom: 16px;
+}
+
+/* LABEL */
+.input-group label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* INPUTS */
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* FOCUS */
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: rgb(12,52,61);
+    box-shadow: 0 0 5px rgba(44,94,168,0.3);
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(12,52,61);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+button:hover {
+    background: rgb(12,52,61);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .form-box {
+        padding: 20px;
+    }
+}

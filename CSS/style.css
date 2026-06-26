@@ -1,0 +1,642 @@
+.navbar{
+    background-color: rgb(12,52,61);
+    height: 70px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.Signup-button {
+    
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    
+    margin-right: 15px;   /* adds space after Signup */
+
+}
+
+.Signup-button:hover {
+    background-color:gray;
+    color: white;
+}
+
+.login-button {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background-color:gray;
+    color: white;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+/* IMPORTANT FIX */
+.nav-link {
+    color: white!important;  /* override bootstrap */
+    font-weight: 500;
+    font-size: 23px;
+    position: relative;        /* parent must be relative */
+}
+
+/* Hover color */
+.nav-link:hover,
+.nav-link.active {
+    color:white !important;
+}
+
+
+/* Underline */
+.nav-link::before {
+    content: "";
+    position: absolute;        /* MUST be absolute */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+/* Show underline on hover */
+.nav-link:hover::before {
+    width: 100%;
+}
+.navbar-brand img {
+    height: 100px;
+    width: 100px;
+    filter: brightness(0) invert(1);
+}
+body {
+    padding-top: 70px; /* <-- ADD THIS */
+    margin: 0;
+        position:relative;
+}
+.hero-section {
+    background: url("../Images/main.jpg") no-repeat center;
+    background-size: cover;
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    position: relative;
+    
+    align-items: flex-start;  /* align to top */
+    padding-top: 150px;       /* adjust as needed */
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.project-title {
+    font-size: 50px;
+    font-weight: 700;
+    color:rgb(12,52,61);
+}
+
+.hero-slogan {
+    font-size: 40px;
+    margin: 20px 0;
+    font-weight: 600;
+    color: rgb(12,52,61);
+}
+
+.hero-btn {
+    background-color: rgb(12,52,61);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+/* Services Section */
+.services-section {
+    color: rgb(12,52,61);
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.services-header h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: rgb(12,52,61);
+}
+
+.services-header p {
+    font-size: 18px;
+    color: rgb(12,52,61);
+    max-width: 700px;
+    margin: 0 auto 10px auto;
+}
+
+.services-boxes {
+    
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* Service Box */
+.service-box {
+    text-align: justify;
+    width: 350px;
+    min-height: 400px; /* increase height */
+    padding: 40px 20px;
+    border-radius: 20px;
+    color:rgb(12,52,61);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    /* Gradient backgrounds for each box */
+}
+
+/* Target each box with nth-child for unique gradients */
+.service-box:nth-child(1) {
+    background: linear-gradient(#a0a9dd, #a0a9dd, #8aafff);
+}
+.service-box:nth-child(2) {
+    background: linear-gradient(135deg, #ffe865, #f0d24f);
+}
+.service-box:nth-child(3) {
+    background: linear-gradient(135deg, #ffc38b, #ffb672);
+}
+.h{
+    margin-top: 20px;
+}
+.hh{
+    margin-bottom: 30px;
+     margin-top: 30px;
+
+}
+
+.service-icon {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    /* margin-bottom: 20px; */
+   
+}
+
+.service-box h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.service-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+
+
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+    color: rgb(12,52,61);
+}
+
+/* Doctor Section */
+.doctor-section {
+    color: rgb(12,52,61);
+    width: 90%;
+    display: flex;
+    align-items: center;
+      margin: 50px auto; 
+
+    /* border-radius: 20px; */
+    justify-content: center;
+    gap: 60px;
+    padding: 70px 10%;
+    /* background: #e6f2f2; */
+
+
+    background: #e6f2f2;
+backdrop-filter: blur(15px);
+border-radius: 30px;
+box-shadow: 0 25px 60px rgba(13,43,92,0.08);
+}
+
+.doctor-section.reverse {
+    flex-direction: row-reverse;
+    background: #e6f2f2;
+}
+
+/* Doctor Image */
+.doctor-image {
+    flex: 1;
+}
+
+.doctor-image img {
+    width: 100%;
+    max-width: 450px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Doctor Info */
+.doctor-info {
+    text-align: justify;
+    flex: 1;
+    max-width: 600px;
+}
+
+.small-heading {
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #0C343D;
+    font-weight: bold;
+}
+
+.doctor-info h2 {
+    font-size: 2.2rem;
+    margin: 10px 0 20px;
+}
+
+.doctor-info p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Button */
+.appointment-btn {
+    margin-top: 20px;
+    padding: 12px 28px;
+    border: none;
+    background-color:rgb(12,52,61) ;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.appointment-btn:hover {
+    background-color: gray;
+    color:black;
+}
+
+/* Quote */
+.quote {
+    text-align: center;
+    padding: 70px 20px;
+    background: #ffffff;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #0C343D;
+}
+
+/* Footer Main */
+.footer {
+    background-color: rgb(12,52,61);
+    color: #ccc;
+    padding: 25px 10%;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Left Side */
+.footer-left h2,
+.footer-right h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.footer-left p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* Center */
+.footer-center {
+    text-align: center;
+    max-width: 350px;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-text {
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+/* Social Icons */
+.social-icons i {
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    color: #fff;
+}
+
+/* Right Side */
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-right ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-right ul li a:hover {
+    color: rgb(149, 155, 231);
+    padding-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        text-align: center;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.blog-section {
+ background: #e6f2f2;
+backdrop-filter: blur(15px);
+border-radius: 30px;
+box-shadow: 0 25px 60px rgba(13,43,92,0.08);
+  width: 90%;
+    margin: 50px auto;
+    border-radius: 20px;
+  padding: 80px 0;
+}
+
+.blog-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+ .bl{
+    color:rgb(12,52,61) ;
+ }
+.small-title{
+   color:rgb(12,52,61) ; 
+}
+/* LEFT SIDE */
+.blog-left {
+  flex: 1 1 300px; /* minimum 300px, flexible width */
+  min-width: 300px;
+}
+
+.small-title {
+  letter-spacing: 4px;
+  font-size: 14px;
+  color: rgb(12,52,61);
+}
+
+.blog-left h1 {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.blog-left p {
+  color: rgb(12,52,61);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.view-btn {
+  padding: 12px 30px;
+  background: rgb(12,52,61);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background:gray;
+}
+
+/* RIGHT SIDE - GRID FOR CARDS */
+.blog-right {
+  flex: 2 1 600px; /* flexible width, minimum 600px */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* BLOG CARD */
+.blog-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgb(12,52,61);
+}
+
+/* IMAGE CONTAINER WITH FIXED ASPECT RATIO */
+.img-container {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* keeps proportional height automatically */
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills container without stretching */
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.05);
+}
+
+/* CARD TEXT */
+.blog-card h2 {
+  font-size: 22px;
+  padding: 15px;
+  color: rgb(12,52,61);
+}
+
+.blog-card a {
+  display: block;
+  padding: 0 15px 15px;
+  color: #1c113b;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.blog-card a:hover {
+  color: #5333b1;
+}
+
+/* RESPONSIVE STYLING */
+@media (max-width: 992px) {
+  .blog-left h1 {
+    font-size: 36px;
+  }
+  .blog-card h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-left h1 {
+    font-size: 28px;
+  }
+  .blog-card h2 {
+    font-size: 18px;
+  }
+}
+/* Chatbot Icon */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.chatbot-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Chatbot Box */
+.chatbot-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: none;
+    overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+    background: rgb(12,52,61);
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Body */
+.chat-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Question Button */
+.question {
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.question:hover {
+    background: rgb(12,52,61);
+    color: white;
+}
+
+/* Answer */
+.answer {
+    background: #e7f1ff;
+    padding: 10px;
+    margin: 5px 0 10px 10px;
+    border-left: 4px solid rgb(12,52,61);
+    display: none;
+}

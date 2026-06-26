@@ -1,0 +1,426 @@
+
+html{
+scroll-behavior:smooth;
+}.navbar{
+    background-color: rgb(12,52,61);
+    height: 70px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.Signup-button {
+    
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    
+    margin-right: 15px;   /* adds space after Signup */
+
+}
+
+.Signup-button:hover {
+    background-color:gray;
+    color: white;
+}
+
+.login-button {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background-color:gray;
+    color: white;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+/* IMPORTANT FIX */
+.nav-link {
+    color: white!important;  /* override bootstrap */
+    font-weight: 500;
+   font-size: 23px;
+    position: relative;        /* parent must be relative */
+}
+
+/* Hover color */
+.nav-link:hover,
+.nav-link.active {
+    color:white !important;
+}
+
+/* Underline */
+.nav-link::before {
+    content: "";
+    position: absolute;        /* MUST be absolute */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+/* Show underline on hover */
+.nav-link:hover::before {
+    width: 100%;
+}
+.navbar-brand img {
+    height: 100px;
+    width: 100px;
+    filter: brightness(0) invert(1);
+}
+
+/* Animated Gradient Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #eef2f7, #ffffff, #f3f7ff, #eef2f7);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  margin: 0;
+  overflow-x: hidden;
+  color:  rgb(12,52,61);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Floating Icons */
+.background-animation {
+   position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background-animation span {
+ position: absolute;
+    font-size: 30px;
+    opacity: 0.15;
+    animation: floatUp 15s linear infinite;
+}
+
+/* Different Positions */
+.background-animation  span:nth-child(1) {
+    left: 5%;
+    animation-duration: 12s;
+}
+
+.background-animation  span:nth-child(2) {
+    left: 20%;
+    animation-duration: 18s;
+    font-size: 50px;
+}
+
+.background-animation span:nth-child(3) {
+    left: 35%;
+    animation-duration: 14s;
+}
+
+.background-animation  span:nth-child(4) {
+    left: 50%;
+    animation-duration: 20s;
+    font-size: 55px;
+}
+
+.background-animation  span:nth-child(5) {
+    left: 65%;
+    animation-duration: 13s;
+}
+
+.background-animation  span:nth-child(6) {
+    left: 80%;
+    animation-duration: 17s;
+}
+
+.background-animation  span:nth-child(7) {
+    left: 90%;
+    animation-duration: 15s;
+}
+
+.background-animation  span:nth-child(8) {
+    left: 75%;
+    animation-duration: 22s;
+}
+
+/* Animation */
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+    }
+}
+
+
+
+
+
+/* Info Card */
+.info-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 40px auto 20px; /* space from button and bottom */
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.info-image {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.info-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 18px 0 0 18px; /* rounded left side */
+}
+
+/* Text */
+.info-text {
+  flex: 2 1 400px;
+  padding: 30px 25px;
+}
+
+.info-text h2 {
+  font-size: 28px;
+  color: rgb(12,52,61);
+  margin-bottom: 15px;
+}
+
+.info-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(12,52,61);
+}
+
+/* Responsive: stack on small screens */
+@media screen and (max-width: 768px) {
+  .info-card {
+    flex-direction: column;
+    border-radius: 18px;
+  }
+  .info-image img {
+    border-radius: 18px 18px 0 0;
+  }
+  .info-text {
+    padding: 20px;
+  }
+}
+/* Progress Bar */
+.progress-container {
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  background: #eee;
+  z-index: 999;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, rgb(12,52,61), rgb(12,52,61));
+  transition: width 0.4s ease;
+}
+
+/* Layout */
+.container {
+
+  max-width: 1000px;
+  margin: auto;
+  padding: 80px 20px 40px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: rgb(12,52,61);
+   margin-top: 1%;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+
+.subtitle {
+  text-align: center;
+  color: rgb(12,52,61);
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* BIG CARDS */
+.quiz-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+   font-weight: 600;
+}
+/* NAME INPUT FOCUS COLOR */
+.form-control:focus{
+    border-color: rgb(12,52,61) !important;
+
+    box-shadow: 0 0 0 0.25rem rgba(12,52,61,0.25) !important;
+
+    outline: none !important;
+}
+
+/* Animation */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: smoothFade 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes smoothFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quiz-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* Question */
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Option */
+.option {
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 2px solid #e5e5e5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  font-size: 16px;
+   
+
+}
+
+.option:hover {
+  transform: scale(1.08);
+  border-color: rgb(12,52,61);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.option.selected {
+  background: rgb(12,52,61);
+  color: white;
+  border-color: rgb(12,52,61);
+}
+
+/* Image Options */
+.img-options .option {
+    justify-self: center;
+  margin: 0 auto;
+
+  width: 180px;
+  padding: 15px;
+  text-align: center;
+}
+
+.img-options img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.img-options .option:hover img {
+  transform: scale(1.1);
+}
+.center-option {
+   grid-column: 2 / 4; /* move to center (middle columns) */
+  justify-self: center;
+  margin: 0 auto;
+  
+}
+/* Button */
+.submit-btn {
+  width: 50%;
+  padding: 18px;
+  font-size: 20px;
+  background:  rgb(12,52,61);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  display: block;
+  margin: 40px auto; /* centers horizontally */
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
