@@ -68,6 +68,16 @@ Ayesha Amjad — Front-End Developer
 🌐 Live Project: http://dermabridgex.infinityfree.me
 🔗 github.com/AyeshaCodes25
 
+## 🔐 Demo Login Credentials
+
+### ⚙️ Admin Panel
+- Email: admin1@gmail.com
+- Password: admin@123
+
+### 👨‍⚕️ Doctor Panel
+- Email: doctors@gmail.com  
+- Password: doctor@123
+
 ## 🏫 Supervisor
 Sir Jawad Ahmed — Lecturer, IT & CS Department
 GC University Faisalabad
