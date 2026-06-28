@@ -11,16 +11,15 @@ direct purchase links. A smart appointment system supported by a
 chatbot ensures smooth scheduling. Secure online payments and 
 real-time video consultations make the platform reliable and 
 convenient for users.
-
 ## 📸 Screenshots
 
 | Home Page | Result Page |
 |-----------|-------------|
-| ![Home](home.jpg) | ![Result](result.jpg) |
+| ![Home](home.JPG) | ![Result](result.JPG) |
 
 | Dashboard | Chatbot |
 |-----------|---------|
-| ![Dashboard](dashboard.jpg) | ![Chatbot](chatbot.jpg) |
+| ![Dashboard](dashboard.JPG) | ![Chatbot](chatbot.JPG) |
 
 ## 👥 Team Members
 - Ayesha Amjad — 2022-GCUF-073673
