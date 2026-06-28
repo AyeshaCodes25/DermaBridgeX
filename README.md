@@ -16,11 +16,11 @@ convenient for users.
 
 | Home Page | Result Page |
 |-----------|-------------|
-| ![Home](home.png) | ![Result](result.png) |
+| ![Home](home.jpg) | ![Result](result.jpg) |
 
 | Dashboard | Chatbot |
 |-----------|---------|
-| ![Dashboard](dashboard.png) | ![Chatbot](chatbot.png) |
+| ![Dashboard](dashboard.jpg) | ![Chatbot](chatbot.jpg) |
 
 ## 👥 Team Members
 - Ayesha Amjad — 2022-GCUF-073673
