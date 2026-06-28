@@ -12,6 +12,16 @@ chatbot ensures smooth scheduling. Secure online payments and
 real-time video consultations make the platform reliable and 
 convenient for users.
 
+## 📸 Screenshots
+
+| Home Page | Result Page |
+|-----------|-------------|
+| ![Home](home.png) | ![Result](result.png) |
+
+| Dashboard | Chatbot |
+|-----------|---------|
+| ![Dashboard](dashboard.png) | ![Chatbot](chatbot.png) |
+
 ## 👥 Team Members
 - Ayesha Amjad — 2022-GCUF-073673
 - Rabia Asghar — 2022-GCUF-073661
